@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ngg-yj-btb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="A61-Zc-q0v">
+            <objects>
+                <viewController id="SiN-we-evw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O3e-zV-HtX"/>
+                        <viewControllerLayoutGuide type="bottom" id="8dR-Qr-ebd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="II9-DT-uCF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="sY5-7E-2Nt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHW-UX-4TT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="779"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="H8I-oq-5r9">
+            <objects>
+                <viewController id="KxU-0R-O8e" customClass="MapsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OcS-yj-e2y"/>
+                        <viewControllerLayoutGuide type="bottom" id="O1G-NW-yrM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yJb-Yq-WTm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2xt-Ya-da7">
+                                <rect key="frame" x="16" y="25" width="343" height="552"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-eP-4m6">
+                                <rect key="frame" x="16" y="582" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Карта"/>
+                                    <segment title="Спутник"/>
+                                    <segment title="Гибрид"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeTypeOfMap:" destination="KxU-0R-O8e" eventType="valueChanged" id="chy-jo-YGA"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2xt-Ya-da7" firstAttribute="top" secondItem="OcS-yj-e2y" secondAttribute="bottom" constant="5" id="07A-ym-WwV"/>
+                            <constraint firstItem="2xt-Ya-da7" firstAttribute="leading" secondItem="BuI-eP-4m6" secondAttribute="leading" id="EEL-aD-8js"/>
+                            <constraint firstItem="BuI-eP-4m6" firstAttribute="trailing" secondItem="yJb-Yq-WTm" secondAttribute="trailingMargin" id="Iac-lJ-Jnw"/>
+                            <constraint firstItem="2xt-Ya-da7" firstAttribute="leading" secondItem="yJb-Yq-WTm" secondAttribute="leadingMargin" id="M65-gv-qRJ"/>
+                            <constraint firstItem="2xt-Ya-da7" firstAttribute="trailing" secondItem="yJb-Yq-WTm" secondAttribute="trailingMargin" id="SAy-1T-4Gg"/>
+                            <constraint firstItem="BuI-eP-4m6" firstAttribute="top" secondItem="2xt-Ya-da7" secondAttribute="bottom" constant="5" id="TQ4-RT-ZFV"/>
+                            <constraint firstItem="2xt-Ya-da7" firstAttribute="trailing" secondItem="BuI-eP-4m6" secondAttribute="trailing" id="b1E-dk-1Hf"/>
+                            <constraint firstItem="BuI-eP-4m6" firstAttribute="leading" secondItem="yJb-Yq-WTm" secondAttribute="leadingMargin" id="fBv-Yx-EbS"/>
+                            <constraint firstItem="O1G-NW-yrM" firstAttribute="top" secondItem="BuI-eP-4m6" secondAttribute="bottom" constant="8" symbolic="YES" id="hH3-rV-seP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="BXM-F0-WMo"/>
+                    <connections>
+                        <outlet property="map" destination="2xt-Ya-da7" id="HR7-3z-Lqp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ih-FL-T98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664.79999999999995" y="124.58770614692655"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fLC-iU-O9o">
+            <objects>
+                <tabBarController id="ngg-yj-btb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="zt8-ey-LJX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KxU-0R-O8e" kind="relationship" relationship="viewControllers" id="Dbx-xF-5wj"/>
+                        <segue destination="SiN-we-evw" kind="relationship" relationship="viewControllers" id="n3F-5A-rQF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvI-Vd-BW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="452"/>
+        </scene>
+    </scenes>
+</document>
