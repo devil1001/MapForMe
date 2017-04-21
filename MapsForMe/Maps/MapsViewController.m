@@ -22,11 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.map = nil;
     self.title = @"Hello";
     self.map.showsUserLocation = YES;
     [self.map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-    // Do any additional setup after loading the view.
+    CLLocationCoordinate2D target = CLLocationCoordinate2DMake(48.742426, 44.537126);
+    MKPlacemark *place = [[MKPlacemark alloc] initWithCoordinate:target];
+    MKPointAnnotation *annotPoint = [[MKPointAnnotation alloc] init];
+    annotPoint.title = @"Родина Мать";
+    annotPoint.coordinate = place.coordinate;
+    NSArray *array = @[annotPoint];
+    [self.map showAnnotations:array animated:YES];
 //    locationManager = [[CLLocationManager alloc] init];
 //    [locationManager requestWhenInUseAuthorization];
 //    locationManager.delegate = self;
