@@ -32,7 +32,7 @@
         <!--Item 1-->
         <scene sceneID="H8I-oq-5r9">
             <objects>
-                <viewController id="KxU-0R-O8e" customClass="MapsViewController" sceneMemberID="viewController">
+                <viewController id="KxU-0R-O8e" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OcS-yj-e2y"/>
                         <viewControllerLayoutGuide type="bottom" id="O1G-NW-yrM"/>
@@ -52,7 +52,7 @@
                                     <segment title="Гибрид"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changeTypeOfMap:" destination="KxU-0R-O8e" eventType="valueChanged" id="chy-jo-YGA"/>
+                                    <action selector="changeTypeOfMap:" destination="KxU-0R-O8e" eventType="valueChanged" id="olQ-ku-oEs"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -71,7 +71,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="BXM-F0-WMo"/>
                     <connections>
-                        <outlet property="map" destination="2xt-Ya-da7" id="HR7-3z-Lqp"/>
+                        <outlet property="mapView" destination="2xt-Ya-da7" id="zTs-XF-irW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ih-FL-T98" userLabel="First Responder" sceneMemberID="firstResponder"/>
