@@ -12,6 +12,9 @@
 
 
 @interface ListViewController () <UITableViewDataSource, UITableViewDelegate>
+{
+    NSMutableArray *_modelArray;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -21,6 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self setupModel];
     // Do any additional setup after loading the view.
 }
 
@@ -29,8 +35,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setupModel {
+    _modelArray = [[NSMutableArray alloc] init];
+    for (int i =0; i<10; i++) {
+        NSString *header = [NSString stringWithFormat:@"head%d",i];
+        NSString *imagePath = @"/Users/devil1001/Documents/ios/MapsForMe/MapsForMe/Photos/List_Icon.png";
+        ListModel *model = [[ListModel alloc] initWithHeader:header imagePath:imagePath];
+        [_modelArray addObject:model];
+    }
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return _modelArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -40,9 +57,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCell" forIndexPath:indexPath];
     ListModel *model;
-    
-    
-    
+    if ([_modelArray[indexPath.row] isMemberOfClass:[ListModel class]]){
+        model = _modelArray[indexPath.row];
+        [cell fillCellWithHeader:model];
+    }
     return cell;
 }
 

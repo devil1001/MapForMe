@@ -19,6 +19,7 @@
 		18F429361EAE4A270066DC97 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F429351EAE4A270066DC97 /* ListViewController.m */; };
 		18F4293C1EAE4D210066DC97 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F4293B1EAE4D210066DC97 /* ListCell.m */; };
 		18F429401EAE4E430066DC97 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F4293F1EAE4E430066DC97 /* ListModel.m */; };
+		18F429421EAE521E0066DC97 /* List_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F429411EAE521E0066DC97 /* List_Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		18F4293B1EAE4D210066DC97 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
 		18F4293E1EAE4E430066DC97 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
 		18F4293F1EAE4E430066DC97 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
+		18F429411EAE521E0066DC97 /* List_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List_Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		186350CA1EABF72400805269 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				18F429411EAE521E0066DC97 /* List_Icon.png */,
 				186350D71EAC00FB00805269 /* Photo_Place.jpg */,
 			);
 			path = Photos;
@@ -201,6 +204,7 @@
 				18B7690B1EAA55D60038469F /* LaunchScreen.storyboard in Resources */,
 				18B769081EAA55D60038469F /* Assets.xcassets in Resources */,
 				18B769061EAA55D60038469F /* Main.storyboard in Resources */,
+				18F429421EAE521E0066DC97 /* List_Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
