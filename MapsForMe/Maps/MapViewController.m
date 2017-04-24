@@ -62,6 +62,11 @@
 
 }
 
+- (void)mapView:(MKMapView *)mapView annotationView:(nonnull MKAnnotationView *)view calloutAccessoryControlTapped:(nonnull UIControl *)control {
+    NSLog(@"%@", view.annotation.title);
+    //CGFloat size = mapView.contentScaleFactor;
+}
+
 
 - (IBAction)changeTypeOfMap:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {

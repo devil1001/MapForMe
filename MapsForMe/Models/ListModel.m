@@ -10,7 +10,7 @@
 
 @implementation ListModel
 
--(instancetype)initWithHeader:(NSString *)header imagePath:(NSString *)imagePath {
+- (instancetype)initWithHeader:(NSString *)header imagePath:(NSString *)imagePath {
     if (self = [super init]) {
         _header = header;
         _imagePath = imagePath;
