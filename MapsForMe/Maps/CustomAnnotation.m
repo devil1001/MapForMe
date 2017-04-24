@@ -23,7 +23,9 @@
     MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"CustomAnnotation"];
     annotationView.enabled = YES;
     annotationView.canShowCallout = YES;
-    annotationView.image = [UIImage imageNamed:@"Photo_Place.jpg"];
+    NSData *imageData = [NSData dataWithContentsOfFile:@"/Users/devil1001/Documents/ios/MapsForMe/MapsForMe/Photos/Base.lproj/Photo_Place.jpg"];
+    annotationView.image = [UIImage imageWithData:imageData scale:5.0];
+    //annotationView.image = [UIImage imageNamed:@"Photo_Place.jpg"];
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return annotationView;
 }

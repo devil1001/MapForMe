@@ -16,6 +16,9 @@
 		18B769081EAA55D60038469F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B769071EAA55D60038469F /* Assets.xcassets */; };
 		18B7690B1EAA55D60038469F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B769091EAA55D60038469F /* LaunchScreen.storyboard */; };
 		18B769181EAA58C60038469F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B769171EAA58C60038469F /* MapKit.framework */; };
+		18F429361EAE4A270066DC97 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F429351EAE4A270066DC97 /* ListViewController.m */; };
+		18F4293C1EAE4D210066DC97 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F4293B1EAE4D210066DC97 /* ListCell.m */; };
+		18F429401EAE4E430066DC97 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F4293F1EAE4E430066DC97 /* ListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,12 @@
 		18B7690A1EAA55D60038469F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B7690C1EAA55D60038469F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B769171EAA58C60038469F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		18F429341EAE4A270066DC97 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		18F429351EAE4A270066DC97 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		18F4293A1EAE4D210066DC97 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		18F4293B1EAE4D210066DC97 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		18F4293E1EAE4E430066DC97 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
+		18F4293F1EAE4E430066DC97 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +84,7 @@
 		18B768FA1EAA55D60038469F /* MapsForMe */ = {
 			isa = PBXGroup;
 			children = (
+				18F4293D1EAE4E040066DC97 /* Models */,
 				186350CA1EABF72400805269 /* Photos */,
 				18B769121EAA56F60038469F /* Maps */,
 				18B768FE1EAA55D60038469F /* AppDelegate.h */,
@@ -103,6 +113,10 @@
 				186350C81EABF02E00805269 /* CustomAnnotation.m */,
 				186350D21EABFEA600805269 /* MapViewController.h */,
 				186350D31EABFEA600805269 /* MapViewController.m */,
+				18F429341EAE4A270066DC97 /* ListViewController.h */,
+				18F429351EAE4A270066DC97 /* ListViewController.m */,
+				18F4293A1EAE4D210066DC97 /* ListCell.h */,
+				18F4293B1EAE4D210066DC97 /* ListCell.m */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -113,6 +127,15 @@
 				18B769171EAA58C60038469F /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18F4293D1EAE4E040066DC97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18F4293E1EAE4E430066DC97 /* ListModel.h */,
+				18F4293F1EAE4E430066DC97 /* ListModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F429361EAE4A270066DC97 /* ListViewController.m in Sources */,
+				18F4293C1EAE4D210066DC97 /* ListCell.m in Sources */,
 				18B769001EAA55D60038469F /* AppDelegate.m in Sources */,
 				18B768FD1EAA55D60038469F /* main.m in Sources */,
 				186350D41EABFEA600805269 /* MapViewController.m in Sources */,
+				18F429401EAE4E430066DC97 /* ListModel.m in Sources */,
 				186350C91EABF02E00805269 /* CustomAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
